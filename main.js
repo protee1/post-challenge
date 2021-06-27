@@ -31,11 +31,12 @@ function view_post_byID(id) {
     })
     .then((data) => {
         console.log(data);
-        Swal.fire(
-            `Title: ${data.title}`,
-            `Body:${data.body}`,
-          )
-    ;
+          return   Swal.fire(
+                `<h1></h1>${data.title}</h1>`,
+                `<p></p>:${data.body}</p>`,
+              );
+         
+
     }).catch(err=>{
         console.log(err.message)
     })
